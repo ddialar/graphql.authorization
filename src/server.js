@@ -4,7 +4,7 @@ import { environment, serverConf } from './config';
 
 import express from 'express';
 
-import expressGraphQL from 'express-graphql';
+import graphqlHTTP from 'express-graphql';
 import schema from './modules/graphql/schema';
 
 var logger = log4js.getLogger();
@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
     '/graphql',
-    expressGraphQL({
+    graphqlHTTP({
         schema: schema,
         graphiql: ((environment.match('development')) ? true : false)
     })
