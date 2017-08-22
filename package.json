@@ -1,0 +1,28 @@
+{
+  "name": "graphql.authorization",
+  "version": "1.0.0",
+  "description": "Tiny example code for express-graphql about how to get a user's JWT, that is provided via Authorization HTTP header for queries and mutations.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon --watch src --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddialar/grapqhql.authorization.git"
+  },
+  "author": "Dailos Rafael Díaz Lara <ddialar@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ddialar/grapqhql.authorization#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "express-graphql": "^0.6.7",
+    "graphql": "^0.10.5",
+    "log4js": "^2.3.3"
+  }
+}
