@@ -13,10 +13,14 @@ const app = express();
 
 app.use(
     '/graphql',
-    graphqlHTTP({
+    graphqlHTTP((request, response, graphQLParams) => ({
         schema: schema,
-        graphiql: ((environment.match('development')) ? true : false)
-    })
+        graphiql: ((environment.match('development')) ? true : false),
+        context: { 
+            request: request, 
+            test: 'Example context value'
+        }
+    }))
 );
 
 app.listen(
